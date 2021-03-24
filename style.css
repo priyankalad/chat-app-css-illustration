@@ -27,6 +27,17 @@ body {
   font-family: "Rubik", "https://fonts.google.com/specimen/Rubik";
 }
 
+.bg-pattern {
+  background-color: var(--light-violet);
+  width: 45%;
+  height: 450px;
+  position: absolute;
+  z-index: 0;
+  left: 0px;
+  top: 0px;
+  border-bottom-right-radius: 100%;
+}
+
 .main-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,6 +54,7 @@ body {
           align-items: center;
   background-color: var(--light-grayish-violet);
   padding: 5vh 0;
+  position: relative;
 }
 
 .main-flex .mobile-flex-item {
@@ -170,7 +182,7 @@ body {
 .main-flex .mobile-flex-item .mobile-flex-container .radio .price {
   margin-left: auto;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container .right {
@@ -184,6 +196,14 @@ body {
   padding: 10px;
   font-weight: 400;
   font-size: 13px;
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container .type-txt .text-input {
+  width: 95%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
+  border: 0px;
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container .dog-image {
