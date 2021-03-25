@@ -22,7 +22,8 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   font-size: 16px;
   font-family: "Rubik", "https://fonts.google.com/specimen/Rubik";
 }
@@ -42,15 +43,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--light-grayish-violet);
-  padding: 5vh 0;
 }
 
 .main-flex .mobile-flex-item {
   height: 100%;
-  width: 350px;
-  padding: 15px;
+  padding: 11px;
   border-radius: 25px;
   background-color: white;
+  margin: 15%;
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container {
@@ -78,7 +78,8 @@ body {
   border-top-right-radius: 25px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  padding: 12px;
+  padding: 10px;
+  overflow: hidden;
   background-image: -webkit-gradient(linear, left top, right top, from(var(--light-violet)), to(var(--light-magenta)));
   background-image: linear-gradient(to right, var(--light-violet), var(--light-magenta));
 }
@@ -105,17 +106,23 @@ body {
           align-items: center;
 }
 
-.main-flex .mobile-flex-item .mobile-flex-container header .about-avatar i {
-  padding-right: 10px;
+.main-flex .mobile-flex-item .mobile-flex-container header .about-avatar i.back {
+  -webkit-transform: scale(0.7, 1.4);
+          transform: scale(0.7, 1.4);
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container header .about-avatar i.dots {
   margin-left: auto;
+  color: var(--pale-violet);
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container header .about-avatar i {
+  padding-right: 10px;
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container header .about-avatar .avatar {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   border: 1px solid white;
 }
@@ -143,13 +150,13 @@ body {
   border-radius: 10px;
   padding: 10px;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 10px;
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container .radio {
   background-image: -webkit-gradient(linear, left top, right top, from(var(--light-magenta)), to(var(--light-violet)));
   background-image: linear-gradient(to right, var(--light-magenta), var(--light-violet));
-  color: white;
+  color: var(--pale-violet);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -171,6 +178,7 @@ body {
   margin-left: auto;
   font-weight: 700;
   font-size: 15px;
+  color: white;
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container .right {
@@ -183,13 +191,43 @@ body {
   border-radius: 15px;
   padding: 10px;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 10px;
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container .dog-image {
-  width: 50px;
-  height: 50px;
-  border-radius: 20px;
+  width: 30%;
+  border-radius: 15px;
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container footer {
+  margin: 15px 10px;
+  background-color: white;
+  padding: 2% 5%;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container footer input {
+  color: var(--grayish-blue);
+  border: none;
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container footer input:focus {
+  outline: none;
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container footer button {
+  border: none;
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container footer button .fa {
+  background-color: white;
+  color: var(--very-dark-desaturated-violet);
 }
 
 .main-flex .info-flex-item {

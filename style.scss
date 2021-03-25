@@ -21,7 +21,8 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   font-size: 16px;
   font-family: "Rubik", "https://fonts.google.com/specimen/Rubik";
 }
@@ -32,14 +33,13 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--light-grayish-violet);
-  padding: 5vh 0;
+
   .mobile-flex-item {
     height: 100%;
-    width: 350px;
-    padding: 15px;
+    padding: 11px;
     border-radius: 25px;
     background-color: white;
-
+    margin: 15%;
     .mobile-flex-container {
       background-color: var(--light-grayish-violet);
       border-radius: 25px;
@@ -54,7 +54,8 @@ body {
         border-top-right-radius: 25px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        padding: 12px;
+        padding: 10px;
+        overflow: hidden;
         background-image: linear-gradient(
           to right,
           var(--light-violet),
@@ -74,16 +75,21 @@ body {
         .about-avatar {
           display: flex;
           align-items: center;
-          i {
-            padding-right: 10px;
+          i.back {
+            transform: scale(0.7, 1.4);
           }
 
           i.dots {
             margin-left: auto;
+            color: var(--pale-violet);
           }
+          i {
+            padding-right: 10px;
+          }
+
           .avatar {
-            height: 50px;
-            width: 50px;
+            height: 30px;
+            width: 30px;
             border-radius: 50%;
             border: 1px solid white;
           }
@@ -109,7 +115,7 @@ body {
         border-radius: 10px;
         padding: 10px;
         font-weight: 400;
-        font-size: 13px;
+        font-size: 10px;
       }
 
       .radio {
@@ -118,7 +124,7 @@ body {
           var(--light-magenta),
           var(--light-violet)
         );
-        color: white;
+        color: var(--pale-violet);
         display: flex;
         align-items: center;
         font-size: 10px;
@@ -133,6 +139,7 @@ body {
           margin-left: auto;
           font-weight: 700;
           font-size: 15px;
+          color: white;
         }
       }
 
@@ -145,13 +152,40 @@ body {
         border-radius: 15px;
         padding: 10px;
         font-weight: 400;
-        font-size: 13px;
+        font-size: 10px;
       }
 
       .dog-image {
-        width: 50px;
-        height: 50px;
-        border-radius: 20px;
+        width: 30%;
+        border-radius: 15px;
+      }
+
+      footer {
+        margin: 15px 10px;
+        background-color: white;
+        padding: 2% 5%;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          color: var(--grayish-blue);
+          border: none;
+        }
+
+        input:focus {
+          outline: none;
+        }
+
+        button {
+          // background-color: var(--very-dark-desaturated-violet);
+          border: none;
+
+          .fa {
+            background-color: white;
+            color: var(--very-dark-desaturated-violet);
+          }
+        }
       }
     }
   }
