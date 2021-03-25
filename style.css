@@ -160,24 +160,39 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 10px;
+  font-size: 12px;
 }
 
-.main-flex .mobile-flex-item .mobile-flex-container .radio .radio-circle {
-  height: 15px;
-  width: 15px;
-  border: 1px solid var(--very-light-magenta);
+.main-flex .mobile-flex-item .mobile-flex-container .radio input[type="radio"] {
   border-radius: 50%;
-  margin-right: 5px;
+  height: 17px;
+  width: 17px;
+  margin-right: 10px;
+  background-color: transparent;
+  -webkit-appearance: inherit;
+     -moz-appearance: inherit;
+          appearance: inherit;
+  border: 1px solid var(--very-light-magenta);
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container .radio input[type="radio"]:checked {
+  background-color: var(--light-violet);
+}
+
+.main-flex .mobile-flex-item .mobile-flex-container .radio input[type="radio"]:focus {
+  outline: none;
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container .radio .price {
   margin-left: auto;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 17px;
   color: white;
 }
 
@@ -231,7 +246,21 @@ body {
 }
 
 .main-flex .info-flex-item {
-  background-color: brown;
+  text-align: center;
+  padding: 0% 10%;
+}
+
+.main-flex .info-flex-item .heading {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--very-dark-desaturated-violet);
+}
+
+.main-flex .info-flex-item p {
+  color: var(--dark-grayish-violet);
+  padding: 5% 0;
+  line-height: 1.5;
+  font-size: 1.2rem;
 }
 
 .attribution {

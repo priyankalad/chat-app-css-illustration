@@ -126,19 +126,30 @@ body {
         );
         color: var(--pale-violet);
         display: flex;
+        justify-content: flex-start;
         align-items: center;
-        font-size: 10px;
-        .radio-circle {
-          height: 15px;
-          width: 15px;
-          border: 1px solid var(--very-light-magenta);
+        font-size: 12px;
+
+        input[type="radio"] {
           border-radius: 50%;
-          margin-right: 5px;
+          height: 17px;
+          width: 17px;
+          margin-right: 10px;
+          background-color: transparent;
+          appearance: inherit;
+          border: 1px solid var(--very-light-magenta);
         }
+        input[type="radio"]:checked {
+          background-color: var(--light-violet);
+        }
+        input[type="radio"]:focus {
+          outline: none;
+        }
+
         .price {
           margin-left: auto;
           font-weight: 700;
-          font-size: 15px;
+          font-size: 17px;
           color: white;
         }
       }
@@ -190,7 +201,20 @@ body {
     }
   }
   .info-flex-item {
-    background-color: brown;
+    text-align: center;
+    padding: 0% 10%;
+
+    .heading {
+      font-size: 3rem;
+      font-weight: 500;
+      color: var(--very-dark-desaturated-violet);
+    }
+    p {
+      color: var(--dark-grayish-violet);
+      padding: 5% 0;
+      line-height: 1.5;
+      font-size: 1.2rem;
+    }
   }
 }
 
