@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY/hub/chat-app-css-illustration-using-flexbox-t2_70QBZF](https://www.frontendmentor.io/challenges/chat-app-css-illustration-O5auMkFqY/hub/chat-app-css-illustration-using-flexbox-t2_70QBZF)
 - Live Site URL: [https://priyankalad.github.io/chat-app-css-illustration/](https://priyankalad.github.io/chat-app-css-illustration/)
 
 ## My process
