@@ -21,15 +21,16 @@
 
 html,
 body {
-  height: 200vh;
+  height: 100vh;
   width: 100vw;
   font-size: 16px;
   font-family: "Rubik", "https://fonts.google.com/specimen/Rubik";
   background-color: var(--light-grayish-violet);
   position: relative;
+  overflow-x: hidden;
 }
 
-.bg1 {
+.bgTopLeft {
   height: 80vh;
   width: 100vw;
   position: absolute;
@@ -44,15 +45,15 @@ body {
   );
 }
 //t(-180deg, var(--light-magenta),var(--light-violet) 30%)
-.bg2 {
+.bgBottomRight {
   height: 80vh;
   width: 100vw;
   position: absolute;
   transform: translateX(60%);
   border-top-right-radius: 50%;
   border-top-left-radius: 50%;
-  bottom: 0;
-  right: 0;
+  top: 100%;
+  right: 0%;
   background-color: var(--light-violet1);
 }
 
@@ -66,7 +67,7 @@ body {
 
   .mobile-flex-item {
     height: 100%;
-    padding: 11px;
+    padding: 0.5rem;
     border-radius: 25px;
     background-color: white;
     margin: 15%;
@@ -84,7 +85,7 @@ body {
         border-top-right-radius: 25px;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-        padding: 10px;
+        padding: 1rem 1rem;
         overflow: hidden;
         background-image: linear-gradient(
           to right,
@@ -93,12 +94,13 @@ body {
         );
 
         .notch {
-          width: 60%;
+          position: absolute;
+          width: 10rem;
           border-bottom-right-radius: 30px;
           border-bottom-left-radius: 30px;
-          height: 30px;
+          height: 1rem;
           background-color: white;
-          transform: translateY(-20px);
+          transform: translateY(-1rem);
           align-self: center;
         }
 
@@ -114,38 +116,38 @@ body {
             color: var(--pale-violet);
           }
           i {
-            padding-right: 10px;
+            padding-right: 0.5rem;
           }
 
           .avatar {
-            height: 30px;
-            width: 30px;
+            height: 2rem;
+            width: 2rem;
             border-radius: 50%;
             border: 1px solid white;
           }
 
           section {
-            margin-left: 10px;
+            margin-left: 0.5rem;
             color: white;
             font-weight: 700;
             p {
               color: var(--pale-violet);
               font-weight: 400;
-              font-size: 10px;
+              font-size: 0.7rem;
             }
           }
         }
       }
       .left {
-        margin: 13px 0 0 10px;
+        margin: 0.5rem 0 0 0.5rem;
         color: var(--moderate-violet);
         background-color: var(--light-violet1);
         align-items: flex-start;
         width: 60%;
         border-radius: 10px;
-        padding: 10px;
+        padding: 0.5rem;
         font-weight: 400;
-        font-size: 10px;
+        font-size: 0.8rem;
       }
 
       .radio {
@@ -158,13 +160,13 @@ body {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        font-size: 12px;
+        font-size: 0.7rem;
 
         input[type="radio"] {
           border-radius: 50%;
-          height: 17px;
-          width: 17px;
-          margin-right: 10px;
+          height: 1rem;
+          width: 1rem;
+          margin-right: 0.5rem;
           background-color: transparent;
           appearance: inherit;
           border: 1px solid var(--very-light-magenta);
@@ -179,21 +181,21 @@ body {
         .price {
           margin-left: auto;
           font-weight: 700;
-          font-size: 17px;
+          font-size: 1rem;
           color: white;
         }
       }
 
       .right {
-        margin: 13px 10px 0 0;
+        margin: 0.5rem 10px 0 0.5rem;
         color: var(--desaturated-dark-violet);
         background-color: white;
         align-self: flex-end;
         width: 60%;
         border-radius: 15px;
-        padding: 10px;
+        padding: 0.5rem;
         font-weight: 400;
-        font-size: 10px;
+        font-size: 0.8rem;
       }
 
       .dog-image {
@@ -202,7 +204,7 @@ body {
       }
 
       footer {
-        margin: 15px 10px;
+        margin: 0.5rem 0.5rem;
         background-color: white;
         padding: 2% 5%;
         border-radius: 30px;
@@ -219,7 +221,6 @@ body {
         }
 
         button {
-          // background-color: var(--very-dark-desaturated-violet);
           border: none;
 
           .fa {
@@ -256,26 +257,53 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   html,
   body {
-    height: 100vh;
-
-    .bg1 {
-      width: 30vw;
+    overflow: hidden;
+    .bgTopLeft {
+      width: 40vw;
       transform: translateX(-30%);
     }
-    .bg2 {
-      width: 30vw;
+    .bgBottomRight {
+      top: 25%;
+      right: 0%;
+      width: 40vw;
       transform: translateX(30%);
     }
 
     .main-flex {
+      width: 80%;
       flex-direction: row;
+      margin: 5% 10%;
+      .mobile-flex-item {
+        width: 0;
+        height: 80vh;
+        margin: 2% 10%;
+        flex: 1 1 auto;
+        .mobile-flex-container {
+          height: 100%;
+          header {
+            padding: 2rem 1rem;
+            .notch {
+              transform: translateY(-2rem);
+            }
+          }
+        }
+      }
 
       .info-flex-item {
         width: 20%;
-        flex: 1;
+        flex: 1 1 100px;
+        text-align: left;
+        padding: 0;
+
+        .heading {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1rem;
+        }
       }
     }
   }
