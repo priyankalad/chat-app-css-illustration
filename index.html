@@ -55,12 +55,12 @@
             <!-- <div class="radio-circle"></div> -->
             <!-- <p>30 minute walk</p> -->
             <input type="radio" id="minute30" name="price" value="minute30" />
-            <label>30 minute walk</label>
+            <label for="minute30">30 minute walk</label>
             <span class="price"> $29</span>
           </div>
           <div class="left radio">
             <input type="radio" id="hour1" name="price" value="hour1" />
-            <label>1 hour walk</label>
+            <label for="hour1">1 hour walk</label>
             <span class="price"> $49</span>
 
             <!-- <div class="radio-circle"></div>
@@ -69,8 +69,16 @@
           </div>
 
           <footer>
-            <input value="Type a message..." />
-            <button><i class="fa fa-3x fa-chevron-circle-right"></i></button>
+            <input
+              placeholder="Type a message..."
+              aria-labelledby="txtMessage"
+            />
+            <button>
+              <i
+                class="fa fa-3x fa-chevron-circle-right"
+                aria-labelledby="btnSend"
+              ></i>
+            </button>
           </footer>
         </div>
       </div>

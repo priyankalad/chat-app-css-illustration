@@ -75,6 +75,7 @@ body {
 }
 
 .main-flex .mobile-flex-item {
+  max-width: 350px;
   height: 100%;
   padding: 0.5rem;
   border-radius: 25px;
@@ -258,7 +259,6 @@ body {
 }
 
 .main-flex .mobile-flex-item .mobile-flex-container footer input {
-  color: var(--grayish-blue);
   border: none;
 }
 

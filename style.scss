@@ -66,6 +66,7 @@ body {
   align-items: center;
 
   .mobile-flex-item {
+    max-width: 350px;
     height: 100%;
     padding: 0.5rem;
     border-radius: 25px;
@@ -212,7 +213,6 @@ body {
         justify-content: space-between;
 
         input {
-          color: var(--grayish-blue);
           border: none;
         }
 
